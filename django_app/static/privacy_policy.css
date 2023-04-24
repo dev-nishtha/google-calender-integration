@@ -1,0 +1,48 @@
+body {
+  background-color: #fafafa;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-color: dodgerblue;
+
+}
+
+.container {
+  max-width: 500px;
+  margin: 7rem auto 0 auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+.container h1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container p {
+  margin-bottom: 20px;
+}
+
+.container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.container a:hover {
+  text-decoration: underline;
+}
+
+.container p:first-child {
+  margin-top: 0;
+}
+
+.container p:last-child {
+  margin-bottom: 0;
+}

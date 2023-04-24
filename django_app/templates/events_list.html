@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'events_list.css' %}">
+
+	<title>Events List</title>
+</head>
+<body>
+  {% if events %}
+	<table>
+		<thead>
+			<tr>
+				<th>Event</th>
+				<th>Start Time</th>
+				<th>End Time</th>
+				<th>Location</th>
+			</tr>
+		</thead>
+		<tbody>
+      {% for event in events %}
+			<tr>
+				<td><a href={{event.htmlLink}}>{{ event.summary }}</a></td>
+				<td>{{ event.start.dateTime }}</td>
+				<td>{{ event.end.dateTime }}</td>
+				<td>{{ event.location }}</td>
+			</tr>
+      {% endfor %}
+		</tbody>
+	</table>
+  {% else %}
+      <p>No events found.</p>
+    {% endif %}
+</body>
+</html>
